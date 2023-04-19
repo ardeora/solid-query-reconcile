@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* @apply bg-gray-950 text-gray-200; */
+  /* font-family: "Roboto", sans-serif; */
+}
+main {
+  width: 100%;
+  max-width: 600px;
+  margin: 10vh auto;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+h5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+h6 {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.container {
+  position: relative;
+}
+
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-exit-to {
+  opacity: 0;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-exit-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter,
+.slide-fade-exit-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-exit-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.group-item {
+  transition: all 0.5s;
+}
+
+.group-item-enter,
+.group-item-exit-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.group-item-exit-active {
+  position: absolute;
+}
